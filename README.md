@@ -38,9 +38,10 @@ GARD算法具备以下特点：
 
 ## Distance Estimation Accuracy
 - 基于DAIR-V2X数据集进行测试，测距精度如下：
-
+<div align=center><img height="360" src="docs/GARD_prediction_accuracy_1.png"/></div>
 
 - 基于中科大先进技术研究园区实际部署测试结果与IPM算法对比效果如下：
+<div align=center><img height="360" src="docs/GARD_prediction_accuracy_2.png"/></div>
 
 ## Getting Started
 ### 1. Prerequisites
