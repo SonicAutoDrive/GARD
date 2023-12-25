@@ -9,16 +9,16 @@ The application scenario of GARD is roadside monocular cameras. The coordinate s
 Note： $K_{intrinsic}$ is the intrinsic parameters of the camera, $T_{camera2Road}$ is the transformation matrix from camera to the road coordiate system, which is defined by the height of the camera from local ground surface and its pose angles.
 
 ## Latest News
-2023-12: paper under review, some code is released for testing along with the core API.
-2023-09: 相关论文已提交学术会议。
+2023-12: paper under review, code snipets, libs along with the core API are released for testing.<br />
+2023-09: paper submitted to a certain conference.
 
 ## System Architecture
 The overall architectural diagram of the GARD algorithm is shown below, primarily comprising two modules: the initialization module and the real-time computation module.
 
 <div align=center><img height="360" src="docs/GARD_pipeline_EN.png"/></div>
 
-1. Initialization Module: in addition to loading the configuration parameters required for execution, this module primarily involves the automated extraction of regions of interest (ROIs), which is designed to automatically determine the area for line feature extraction based on target detection results over a certain period of time. This process aims to exclude feature noise effects caused by roadside buildings, vegetation and the targets themselves."
-2. Real-time computation module: it operates based on the image stream data from the camera and the initialized ROI to perform vanishing point detection and calculates the camera’s pose angles. Then, by leveraging this pose information, it estimates the depth of targets inside the 2D bounding boxes and reconstructs the 3D coordinates of them.
+1. **Initialization Module**: in addition to loading the configuration parameters required for execution, this module primarily involves the automated extraction of regions of interest (ROIs), which is designed to automatically determine the area for line feature extraction based on target detection results over a certain period of time. This process aims to exclude feature noise effects caused by roadside buildings, vegetation and the targets themselves."
+2. **Real-time computation module**: it operates based on the image stream data from the camera and the initialized ROI to perform vanishing point detection and calculates the camera’s pose angles. Then, by leveraging this pose information, it estimates the depth of targets inside the 2D bounding boxes and reconstructs the 3D coordinates of them.
 
 ## Major features
 GARD possesses the following characteristics:
@@ -39,7 +39,6 @@ On CPU, using images with a resolution of $4096\times 2160$ pixels as input, the
 - Testing with the DAIR-V2X dataset yields the following ranging accuracy:
 <div align=center><img height="360" src="docs/GARD_prediction_accuracy_1.png"/></div>
 
-- 基于中科大先进技术研究园区实际部署测试结果与IPM算法对比效果如下：
 - Under the environment of a university campus, a comparison between the results from the deployed GARD and the IPM method is shown below.
 <div align=center><img height="360" src="docs/GARD_prediction_accuracy_2.png"/></div>
 
