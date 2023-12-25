@@ -33,8 +33,8 @@ def crop_rectangle(x, y, width, height, image):
     return image[y:y+height, x:x+width]
 
 class ObjectDetector(object):
-    global test_video_path
-    def __init__(self, camera_config_path = "config/camera/camera_configs.yaml"):
+    def __init__(self, camera_config_path = "config/camera/camera_configs.yaml", 
+                 test_video_path = "path/to/the/test/video"):
         #### 检测算法初始化
         self.detection_2d = detection_2d(config_path = "config/YOLOR/on_gpu.json")
         #### 跟踪算法初始化
@@ -108,10 +108,10 @@ class ObjectDetector(object):
         self.cap.release()
         cv2.destroyAllWindows()
 
-        
+
 
 if __name__ == '__main__':
 
-    test_video_path = "demo/site-25-camera-02-demo-video.mp4"
-    detector = ObjectDetector()
+    test_video_path = sys.argv[1]
+    detector = ObjectDetector(test_video_path)
     detector.callback()

@@ -54,21 +54,14 @@ The stable version will be formed on November 31, 2023.
 
 ### Installation
 1. Clone the repository:
-git clone https://github.com/SonicAutoDrive/autonav-atlas.git
-
-code
+git clone https://github.com/SonicAutoDrive/GARD.git
 
 2. Install dependencies:
-cd [repository]
-pip install -r requirements.txt
+go to the cloned repository, then run: pip install -r requirements.txt
 
-3. Run:
-python3 scripts/object_detector.py
-或者直接
-Please refer to get_started.md for installation and dataset_prepare.md for dataset preparation.
+3. Run the project with a designated mp4 file (we provide a demo file under demo/):
+python3 scripts/object_detector.py path_to_the_mp4_file
 
-4. Evaluation:
-xxx
 
 ## Getting Started
 单独
