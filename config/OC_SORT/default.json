@@ -1,0 +1,1 @@
+{"track_thresh": 0.6, "iou_thresh": 0.3, "deltat": 3, "asso": "iou", "inertia": 0.2}

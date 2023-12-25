@@ -1,0 +1,18 @@
+{
+  "agnostic_nms": false,
+  "augment": false,
+  "classes": null,
+  "conf_thres": 0.5,
+  "device": "cpu",
+  "img_size": 1280,
+  "iou_thres": 0.5,
+  "names": "include/object_detection_2d/YOLOR/data/kitti.names",
+  "output": "include/object_detection_2d/YOLOR/runs/inference",
+  "save_txt": false,
+  "update": false,
+  "view_img": false,
+  "cfg": "include/object_detection_2d/YOLOR/cfg/yolor_w6.cfg",
+  "weights": [
+    "include/object_detection_2d/YOLOR/weights/finetune_7_best.pt"
+  ]
+}

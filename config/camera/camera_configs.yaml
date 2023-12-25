@@ -1,0 +1,59 @@
+image_width: 4096
+image_height: 2160
+camera_name: test-cam
+camera_url: rtsp://admin:ustcd6110172.16.53.4:9095/Streaming/channels/101
+camera_height: 6.6
+camera_pitch: 1.0
+camera_roll: 1.0
+camera_matrix:
+  rows: 3
+  cols: 3
+  data:
+  - 7254.400627945799
+  - 0.0
+  - 2038.911361061225
+  - 0.0
+  - 7248.752980752347
+  - 1159.506900430479
+  - 0.0
+  - 0.0
+  - 1.0
+distortion_model: plumb_bob
+distortion_coefficients:
+  rows: 1
+  cols: 5
+  data:
+  - -0.429420225172356
+  - -1.432526583083631
+  - 0.0005442556400529118
+  - -0.001157571511243
+  - 9.77182042930653
+rectification_matrix:
+  rows: 3
+  cols: 3
+  data:
+  - 1.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+projection_matrix:
+  rows: 3
+  cols: 4
+  data:
+  - 6949.73388671875
+  - 0.0
+  - 2035.208771737598
+  - 0.0
+  - 0.0
+  - 7168.62255859375
+  - 1161.01797331126
+  - 0.0
+  - 0.0
+  - 0.0
+  - 1.0
+  - 0.0

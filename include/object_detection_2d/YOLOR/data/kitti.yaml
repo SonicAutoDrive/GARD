@@ -1,0 +1,10 @@
+# train and val datasets (image directory or *.txt file with image paths)
+train: /data/workspace/yuzijian/kitti_2d_detection/yolo_version/train.txt
+val: /data/workspace/yuzijian/kitti_2d_detection/yolo_version/val.txt
+test: /data/workspace/yuzijian/kitti_2d_detection/yolo_version/test.txt
+
+# number of classes
+nc: 3
+
+# class names，顺序需要与kitti_voc_yolo.ipynb中，voc转yolo时的顺序一致
+names: ['Car', 'Cyclist', 'Pedestrian']
