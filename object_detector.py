@@ -4,6 +4,7 @@ import cv2
 import sys
 sys.path.append("./include/")
 sys.path.append("./libs/")
+sys.path.append('./config')
 
 import numpy as np
 
