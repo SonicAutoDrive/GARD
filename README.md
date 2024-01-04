@@ -70,7 +70,7 @@ python3 object_detector.py ./demo/test_video.mp4
 
 
 ## License
-GraphScope is released under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
+GARD is released under [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 ## Cite
 ```bibtex
