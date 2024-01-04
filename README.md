@@ -61,7 +61,7 @@ pip install -r requirements.txt
 ```
 - Run the project with a designated mp4 file (we provide a demo file under demo/):
 ```
-python3 scripts/object_detector.py path_to_the_mp4_file
+python3 object_detector.py ./demo/test_video.mp4
 ```
 
 - To stop/cancel the running, press Q on the keyboard

@@ -5,6 +5,7 @@ import sys
 sys.path.append("./include/")
 sys.path.append("./libs/")
 sys.path.append('./config')
+sys.path.append(".")
 
 import numpy as np
 
@@ -98,5 +99,6 @@ class ObjectDetector(object):
 if __name__ == '__main__':
 
     test_video_path = sys.argv[1]
-    detector = ObjectDetector(test_video_path)
+    detector = ObjectDetector(camera_config_path = "./config/camera/camera_configs.yaml" ,
+                              test_video_path = test_video_path)
     detector.callback()
