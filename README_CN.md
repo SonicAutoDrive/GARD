@@ -27,17 +27,17 @@ GARD算法具备以下特点：
 
 - GARD的核心测距方法是基于几何约束与相机成像的数学模型，推理速度快且无GPU以及额外算力消耗
   
-- 在精度与稳定性上胜过业界主流的逆透视变换（IPM）方法
+- 在精度与稳定性上胜过业界流行的逆透视变换（IPM）方法
 
 
 ## CPU Benchmark
 基于CPU，以$4096\times 2160$ 分辨率图片为输入，GARD的实时计算模块中三个步骤的计算耗时如下（毫秒，ms）：
 | 线特征检测（LineFeatureExtractor） | 相机位姿估计（CameraPoseEstimator)  |  目标深度估计（TargetDepthEstimator) |
 |-------------------|-------------------------|----------------------|
-| 20 ms             | 5ms                     | 1ms                  |
+| 20 ms             | 5 ms                    | 1 ms                 |
 
 ## Distance Estimation Accuracy
-- 基于DAIR-V2X数据集进行测试，测距精度如下：
+- 基于DAIR-V2X数据集进行测试，深度预测的精度如下：
 <div align=center><img height="360" src="docs/GARD_prediction_accuracy_1.png"/></div>
 
 - 基于中科大先进技术研究园区实际部署测试结果与IPM算法对比效果如下：

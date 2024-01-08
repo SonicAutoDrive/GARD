@@ -6,7 +6,7 @@ Geometry-Aware Roadside Monocular Depth Estimation (GARD) is an object-level mon
 The application scenario of GARD is roadside monocular cameras. The coordinate systems and basic principles are illustrated in the diagram below：
 <div align=center><img height="360" src="docs/GARD_principle.png"/></div>
 
-Note： $K_{intrinsic}$ is the intrinsic parameters of the camera, $T_{camera2Road}$ is the transformation matrix from camera to the road coordiate system, which is defined by the height of the camera from local ground surface and its pose angles.
+Note： $K_{intrinsic}$ is the intrinsic parameters of the camera, $T_{camera2Road}$ is the transformation matrix from camera to the road coordiate system, which is defined by $H_{c}$, the height of the camera from local ground surface, and its pose angles.
 
 ## Latest News
 2023-12: paper under review, code snipets, libs along with the core API are released for testing.<br />

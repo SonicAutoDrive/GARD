@@ -51,6 +51,7 @@ class ObjectDetector(object):
                 break
                 
             rgb = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
+            
             ###### ROI 提取，失败则继续，直至成功 ######
             #roi = self.roi_extractor.callback(rgb)
             #if roi is None:
@@ -63,26 +64,27 @@ class ObjectDetector(object):
             #trk = self.tracking_2d.tracking_2d(det)
             #print(trk.shape)
 
-            ####### 灭点检测 ######
+            ####### 灭点计算 ######
             #rec, tri = roi
             #rgb_cropped = rgb[rec[1][0]:rec[1][1], rec[0][0]:rec[0][1],:]
             #self.lines = self.vpd_cv2.GetLines(rgb_cropped)
             #vp, _ = self.vpd_cv2.GetVanishingPoint(self.lines)
-            #self.depth_estimator.update_pose(vp)
-            self.depth_estimator.update_pose([2068, 61])
             #print(f"vp = {self.depth_estimator.vp}")
+            #self.depth_estimator.update_pose(vp)
 
+            ###### 在demo视频中，灭点已经被提前计算出来，因此此处固定
+            self.depth_estimator.update_pose([2068, 61])
+            
             depth = self.depth_estimator.get_depth(det)
 
             for i, obj in enumerate(det):
                 x1, y1, x2, y2 = obj[:4]
                 label = str(np.round(depth[i], 2))+" m"
-                ##print(label)
+                #### 绘制目标检测框
                 plot_one_box((x1, y1, x2, y2), frame, color=(0,255,0), label=label)
 
-            ##### 为了显示方便，改变原图尺寸    
+            ##### 为了在1920x1080分辨率的屏幕上显示方便，改变原图尺寸    
             frame = cv2.resize(frame, (1792, 945))
-            #frame = cv2.resize(frame, fx=0.4, fy=0.4)
             cv2.imshow('video', frame) #显示画面
             
             
