@@ -31,7 +31,7 @@ GARD算法具备以下特点：
 
 
 ## CPU Benchmark
-基于CPU，以$4096\times 2160$ 分辨率图片为输入，GARD的实时计算模块中三个步骤的计算耗时如下（毫秒，ms）：
+基于CPU，以$4096\times 2160$ 分辨率图片为输入，GARD的实时计算模块中三个步骤的计算耗时如下（毫秒，Intel i7-12700 CPU）：
 | 线特征检测（LineFeatureExtractor） | 相机位姿估计（CameraPoseEstimator)  |  目标深度估计（TargetDepthEstimator) |
 |-------------------|-------------------------|----------------------|
 | 20 ms             | 5 ms                    | 1 ms                 |
