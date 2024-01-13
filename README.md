@@ -33,7 +33,7 @@ GARD possesses the following characteristics:
 On CPU, using images with a resolution of $4096\times 2160$ pixels as input, the computation time for the three steps in the real-time computation module are as follows (in milliseconds, ms, Intel i7-12700 CPU)
 | LineFeatureExtractor | CameraPoseEstimator  |  TargetDepthEstimator |
 |-------------------|-------------------------|----------------------|
-| 40 ms             | 5 ms                    | 0.4 ms                  |
+| 20 ms             | 5 ms                    | 0.4 ms                  |
 
 ## Distance Estimation Accuracy
 - Testing with the DAIR-V2X dataset yields the following ranging accuracy:
@@ -53,6 +53,12 @@ On CPU, using images with a resolution of $4096\times 2160$ pixels as input, the
 - Clone the repository:
 ```
 git clone https://github.com/SonicAutoDrive/GARD.git
+```
+
+- Download YOLO-R model weights (put the weight file under include/object_detection_2d/YOLOR/weights/):
+```
+BaiduNetdisk link: https://pan.baidu.com/s/1wSCFXksgQe9TdYNZ9mCzcA
+password: ecsd 
 ```
 
 - Install dependencies:

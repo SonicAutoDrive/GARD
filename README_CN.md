@@ -56,6 +56,12 @@ GARD算法具备以下特点：
 git clone https://github.com/SonicAutoDrive/GARD.git
 ```
 
+- Download YOLO-R model weights (put the weight file under include/object_detection_2d/YOLOR/weights/):
+```
+百度网盘链接: https://pan.baidu.com/s/1wSCFXksgQe9TdYNZ9mCzcA
+提取码: ecsd 
+```
+
 - Install dependencies:
 ```
 pip install -r requirements.txt
