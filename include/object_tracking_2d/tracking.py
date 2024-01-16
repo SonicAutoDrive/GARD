@@ -12,7 +12,9 @@ from object_tracking_2d.OC_SORT.ocsort_tracker.ocsort import OCSort
 class tracking_2d:
     def __init__(self, model_name='OC_SORT', config_path='config/OC_SORT/default.json'):
         # 参数
-        parent_dir = os.path.dirname(__file__)
+        #parent_dir = os.path.dirname(__file__)
+        parent_dir = os.path.dirname(os.path.abspath(__file__))
+        print(parent_dir)
         parent_dir = os.path.split(parent_dir)[0]
         self.root_dir = os.path.split(parent_dir)[0]     # 功能包的根目录
         self.model_name = model_name
